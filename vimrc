@@ -57,6 +57,7 @@ filetype on                  " required
 filetype plugin on
 filetype indent on
 
+" plugin vim
 source ~/code/my-vim/plugin.vim
 
 set laststatus=2
@@ -145,4 +146,3 @@ cnoremap <C-e> <End>
 
 " plugin config
 source ~/code/my-vim/leaderF.vim
-
