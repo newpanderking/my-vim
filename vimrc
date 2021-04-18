@@ -13,7 +13,6 @@ set smartindent
 set cursorline      " 光标所在行
 " show
 set ruler                       " show the current row and column
-set number                      " show line numbers
 set nowrap
 set showcmd                     " display incomplete commands
 set showmode                    " display current modes
@@ -23,6 +22,7 @@ set matchtime=2                 " tenths of a second to show the matching parent
 set nocompatible              " be iMproved, required
 set autoread                  " reload files when changed on disk, i.e. via `git checkout`
 
+" 支持粘贴内容到粘贴板
 set clipboard=unnamed
 " encoding
 set encoding=utf-8
@@ -50,8 +50,6 @@ if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-
-
 filetype on                  " required
 " Enable filetype plugins
 filetype plugin on
@@ -67,15 +65,6 @@ set background=dark
 color molokai
 let g:molokai_original=1
 let g:rehash256=1
-let g:Powerline_symbols='unicode'
-
-
-let Tlist_Ctags_Cmd='ctags'
-let Tlist_Show_One_File=1               "不同时显示多个文件的tag，只显示当前文件的
-let Tlist_WinWidt =28                   "设置taglist的宽度
-let Tlist_Exit_OnlyWindow=1             "如果taglist窗口是最后一个窗口，则退出vim
-"let Tlist_Use_Right_Window=1           "在右侧窗口中显示taglist窗口
-let Tlist_Use_Left_Windo =1             "在左侧窗口中显示taglist窗口 
 
 " ============================ specific file type ===========================
 
@@ -100,25 +89,8 @@ function! AutoSetFileHead()
 	normal o
 endfunc
 
-autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-fun! <SID>StripTrailingWhitespaces()
-	let l = line(".")
-	let c = col(".")
-	%s/\s\+$//e
-	call cursor(l, c)
-endfun
-
-
-" json format 
-command! Jsonf :execute '%!python -m json.tool'
-  \ | :execute '%!python -c "import re,sys;sys.stdout.write(re.sub(r\"\\\u[0-9a-f]{4}\", lambda m:m.group().decode(\"unicode_escape\").encode(\"utf-8\"), sys.stdin.read()))"'
-
-
 " ============================ key map ============================
 
-" key-map
-map <F3> :NERDTreeMirror<CR>
-map <F3> :NERDTreeToggle<CR>
 " select all
 map <Leader>sa ggVG"
 
@@ -126,9 +98,8 @@ map <Leader>sa ggVG"
 nnoremap H ^
 nnoremap L $
 
+nnoremap <F2> :set rnu! rnu?<CR>
 
-nnoremap <F2> :set nu! nu?<CR>
-" nnoremap <F3> :set list! list?<CR>
 nnoremap <F4> :set wrap! wrap?<CR>
 set pastetoggle=<F5>
 nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
@@ -144,5 +115,27 @@ cnoremap <C-k> <t_ku>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
+" git gutter
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
+
+
+" ======================= airline config start ==========
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+nnoremap <C-H> :bp<CR>
+nnoremap <C-L> :bn<CR>
+nnoremap <C-C> :bd<CR>
+" ======================= airline config end   ==========
+
 " plugin config
 source ~/code/my-vim/leaderF.vim
+
+" nerdtree.vim 
+source ~/code/my-vim/nerdtree.vim
+
+" coc.vim 
+source ~/code/my-vim/coc.vim
+
+" mark down preview
+let vim_markdown_preview_github=1

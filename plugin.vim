@@ -6,14 +6,28 @@ call vundle#begin()
 " call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'Yggdroot/LeaderF',{'do': ':LeaderfInstallCExtension'}
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'git://github.com/scrooloose/nerdtree.git'
 
-Plugin 'SuperTab'
-Plugin 'taglist.vim'
+" git
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
+" 主题
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" 快速模糊查询
+Plugin 'Yggdroot/LeaderF',{'do': ':LeaderfInstallCExtension'}
+
+" 自动补全神器
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+
+" 侧边栏
+Plugin 'preservim/nerdtree'
+
+" markdown priview
+Plugin 'JamshedVesuna/vim-markdown-preview'
+
+" Plugin 'taglist.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

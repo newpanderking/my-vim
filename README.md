@@ -1,6 +1,6 @@
 # my-vim
 
-## How to install my-vim config
+## how to install my-vim config
 
 ```
 cd ~
@@ -14,13 +14,13 @@ done!
 
 ## 命令说明
 
-- sql 格式化支持
-```
-,sf
-```
+### F1~5 说明
+- F1: 内置功能键，帮助文档；
+- F2: 行号是否显示, 行号开关；  
+- F3: nerd tree 目录开关；
+- F4: 是否折叠行，折行开关；
+- F5: 粘贴模式开关；
+- F6: 语法高亮开关；
 
-- json格式化支持
-```
-:Jsonf
-```
+- 全选`, sg`
 
