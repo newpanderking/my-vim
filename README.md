@@ -24,3 +24,5 @@ done!
 
 - 全选`, sg`
 
+### markdown 语法命令
+- <C-P>: markdown 预览，浏览器预览
