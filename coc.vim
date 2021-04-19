@@ -1,5 +1,12 @@
 " ======================= coc config start ==========
 
+" coc 默认安装插件
+let g:coc_global_extensions = ['coc-html','coc-css', 'coc-json',
+            \ 'coc-java','coc-python',
+            \ 'coc-emmet','coc-snippets','coc-xml','coc-yaml',
+            \ 'coc-markdownlint','coc-highlight']
+
+
 " if hidden is not set, TextEdit might fail.
 set hidden
 

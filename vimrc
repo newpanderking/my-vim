@@ -67,10 +67,6 @@ let g:molokai_original=1
 let g:rehash256=1
 
 " ============================ specific file type ===========================
-
-autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
-autocmd FileType ruby set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
-autocmd BufRead,BufNew *.md,*.mkd,*.markdown  set filetype=markdown.mkd
 autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
 function! AutoSetFileHead()
 	" .sh
@@ -83,31 +79,30 @@ function! AutoSetFileHead()
 		call setline(1, "\#!/usr/bin/env python")
 		call append(1, "\# encoding: utf-8")
 	endif
-
 	normal G
 	normal o
 	normal o
 endfunc
-
 " ============================ key map ============================
 
 " select all
 map <Leader>sa ggVG"
+" ctrl + s 保存
+nmap <C-S> :w<CR>
+imap <C-S> <ESC>:w<CR>i
 
 " Shift+H goto head of the line, Shift+L goto end of the line
 nnoremap H ^
 nnoremap L $
 
 nnoremap <F2> :set rnu! rnu?<CR>
-
+" <F3> is nerdtree key bind in nerdtree.vim 
 nnoremap <F4> :set wrap! wrap?<CR>
 set pastetoggle=<F5>
 nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
 " Quickly close the current window
 nnoremap <leader>q :q<CR>
-" Quickly save the current file
-nnoremap <leader>w :w<CR>
 
 " command mode, ctrl-a to head， ctrl-e to tail
 cnoremap <C-j> <t_kd>
