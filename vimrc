@@ -56,7 +56,7 @@ filetype plugin on
 filetype indent on
 
 " plugin vim
-source ~/code/my-vim/plugin.vim
+source ~/code/my-vim/plug.vim
 
 set laststatus=2
 set t_Co=256
@@ -90,6 +90,7 @@ map <Leader>sa ggVG"
 " ctrl + s 保存
 nmap <C-S> :w<CR>
 imap <C-S> <ESC>:w<CR>i
+
 
 " Shift+H goto head of the line, Shift+L goto end of the line
 nnoremap H ^

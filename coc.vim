@@ -2,7 +2,7 @@
 
 " coc 默认安装插件
 let g:coc_global_extensions = ['coc-html','coc-css', 'coc-json',
-            \ 'coc-java','coc-python',
+            \ 'coc-java','coc-python', 'coc-prettier',
             \ 'coc-emmet','coc-snippets','coc-xml','coc-yaml',
             \ 'coc-markdownlint','coc-highlight']
 
