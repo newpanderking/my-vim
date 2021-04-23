@@ -2,7 +2,7 @@
 " ======================= nerdtree config start ==========
 
 " 设置快捷键
-map <F3> :NERDTreeToggle<CR>
+map tt :NERDTreeToggle<CR>
 
 
 "打开vim时如果没有文件自动打开NERDTree

@@ -4,7 +4,7 @@
 let g:coc_global_extensions = ['coc-html','coc-css', 'coc-json',
             \ 'coc-java','coc-python', 'coc-prettier',
             \ 'coc-emmet','coc-snippets','coc-xml','coc-yaml',
-            \ 'coc-markdownlint','coc-highlight']
+            \ 'coc-highlight']
 
 
 " if hidden is not set, TextEdit might fail.
@@ -25,11 +25,6 @@ set shortmess+=c
 
 " always show signcolumns
 set signcolumn=yes
-
-
-
-
-
 
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
