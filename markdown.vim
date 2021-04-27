@@ -1,6 +1,6 @@
 
 " 设置为 1 可以在打开 markdown 文件的时候自动打开浏览器预览，只在打开markdown 文件的时候打开一次
-let g:mkdp_auto_start = 1
+" let g:mkdp_auto_start = 1
 
 " 设置为 1 在编辑 markdown 的时候检查预览窗口是否已经打开，否则自动打开预览窗口
 let g:mkdp_auto_open = 1
