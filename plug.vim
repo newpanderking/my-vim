@@ -25,7 +25,7 @@ Plug 'preservim/nerdtree'
 " markdown priview
 " Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
-Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
+Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for':['markdown'] }
 
 " Taglist
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
