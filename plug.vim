@@ -13,6 +13,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" color 
+Plug 'joshdick/onedark.vim'
+
 " 快速模糊查询
 Plug 'Yggdroot/LeaderF',{'do': ':LeaderfInstallCExtension'}
 
