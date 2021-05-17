@@ -85,7 +85,8 @@ endif
 source ~/code/my-vim/plug.vim
 
 " color molokai
-colorscheme onedark
+let g:codedark_conservative = 1
+colorscheme codedark 
 
 " ============================ specific file type ===========================
 autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"

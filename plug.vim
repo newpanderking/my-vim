@@ -14,7 +14,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " color 
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
+Plug 'tomasiser/vim-code-dark'
 
 " 快速模糊查询
 Plug 'Yggdroot/LeaderF',{'do': ':LeaderfInstallCExtension'}
