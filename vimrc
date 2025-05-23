@@ -1,16 +1,15 @@
+" leader
+let mapleader = ","
+let g:mapleader = ","
 
-" ===
+"
 " === Auto load for first time uses
-" ===
+"
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
-" leader
-let mapleader = ' '
-let g:mapleader = ' '
 
 " ====================
 " === Editor Setup ===
@@ -38,7 +37,7 @@ set clipboard=unnamed
 syntax enable
 syntax on
 set nu
-set rnu
+" set rnu    " 相对行号
 set ruler                       " show the current row and column
 set cursorline      " 光标所在行
 
@@ -131,6 +130,9 @@ cnoremap <C-j> <t_kd>
 cnoremap <C-k> <t_ku>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+
+" 格式化json
+map <F12> :%!jq .<CR>
 
 " git gutter
 nmap ]h <Plug>(GitGutterNextHunk)
